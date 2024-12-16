@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url(assets/sky-clouds-cinematic-clouds-wallpaper-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: "poppins", sans-serif;
+}
+
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #232931d2;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 1rem;
+}
+
+
+.img-section {
+    border-radius: 25px;
+    background-image: url(assets/sky-clouds-cinematic-clouds-wallpaper-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: scale(1.03) perspective(200px);
+}
+
+
+.img-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+
+.default-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+.default-info img {
+    width: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+.default-info h2 {
+    font-size: 3rem;
+}
+
+
+.default-info h3 {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+
+.weather-temp {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+
+/* content-section */
+.content-section {
+    padding: 1.5rem;
+}
+
+
+.content-section form {
+    margin: 1.5rem 0;
+    position: relative;
+    /* text-transform: capitalize; */
+}
+
+
+.content-section form input {
+    width: 88%;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    font-family: inherit;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: capitalizeU;
+}
+
+
+.content-section form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.9rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    background: #5c6bc0;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.content-section span {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.day-info .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+
+.day-info .content .title {
+    font-weight: 600;
+}
+
+
+.list-content ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 3rem 0rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+}
+
+
+.list-content ul li {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+
+.list-content ul li:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #232931;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+
+.list-content ul li img {
+    width: 50%;
+    object-fit: cover;
+}
+
+
+
+.icon {
+    opacity: 0;
+}
+
+
+.icon.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.7s;
+}
+
+
+@keyframes fadeIn {
+    to {
+        transition: all 0.5s ease-in;
+        opacity: 1;
+    }
+}
+
+
+
+#laoder {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#laoder h1 {
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right, #084963, #1fc7e3);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+}
+
+
+#laoder h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+
+#laoder h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+@media (max-width:600px) {
+    #laoder h1 {
+        font-size: 10vw;
+
+    }
+
+}

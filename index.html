@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather.</title>
+
+    <!-- Favicons -->
+    <link href="assets/favicon_io/favicon-32x32.png" rel="icon">
+    <link href="assets/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!--Main CSS Files -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS File -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="laoder">
+        <h1>RAINDROPS</h1>
+        <h1>SUNBEAMS</h1>
+        <h1>CLOUDS ASSEMBLING</h1>
+    </div>
+
+    <div id="fixed-img"></div>
+
+    <!-- Main -->
+    <div id="main">
+        <div class="container">
+            <div class="wrapper">
+                <div class="img-section">
+                    <div class="default-info">
+                        <h2 class="default-day">Wednesday</h2>
+                        <span class="default-date">13 November 2024</span>
+                        <div class="icon">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            <h2 class="weather-temp">°C</h2>
+                            <h3 class="cloudtext">Overcast Clouds</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <form action="">
+                        <input type="text" placeholder="Search Location" class="input-field">
+                        <button type="submit" class="btn-search">Search</button>
+                    </form>
+
+                    <div class="day-info">
+                        <div class="content">
+                            <p class="title">NAME</p>
+                            <span class="value">India</span>
+                        </div>
+
+                        <div class="content">
+                            <p class="title">TEMP</p>
+                            <span class="value"></span>
+                        </div>
+
+                        <div class="content">
+                            <p class="title">HUMIDITY</p>
+                            <span class="value">%</span>
+                        </div>
+
+
+                        <div class="content">
+                            <p class="title">WIND SPEED</p>
+                            <span class="value">Km/h</span>
+                        </div>
+                    </div>
+
+                    <div class="list-content">
+                        <ul>
+                            <li>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                                <span>Sat</span>
+                                <span class="day-temp">°C</span>
+                            </li>
+                            <li>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                                <span>Sat</span>
+                                <span class="day-temp">°C</span>
+                            </li>
+                            <li>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                                <span>Sat</span>
+                                <span class="day-temp">°C</span>
+                            </li>
+                            <li>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                                <span>Sat</span>
+                                <span class="day-temp">°C</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
